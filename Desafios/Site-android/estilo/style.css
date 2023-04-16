@@ -1,0 +1,262 @@
+/*ACEITAÇÃO DE CARACTERES ESPECIAIS E ACENTUAÇÃO */
+@charset "UTF-8";
+
+/*EXPORTAÇÃO DE FONTES BAIXADAS*/ 
+@font-face {
+    font-family:'Bebas-Neue';
+    src: url('../fontes/BebasNeue-Regular.otf') format('opentype'), url('../fontes/BebasNeue-Regular.ttf') format('trueType');
+}
+
+@font-face {
+    font-family:'android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+/*VARIÁVEIS EM CSS*/
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063d1e;
+
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas-Neue', 'cursive';
+    --fonte-android:'android', 'cursive';
+
+/*SELETOR GLOBAL
+A partir do CSS3, o asterisco pode ser combinado com namespaces (en-US):
+
+ns|* - aplica a todos os elementos no namespace ns
+*|* - aplica a todos elementos
+|* - aplica a todos os elementos que não tem namespaces declarados*/
+
+
+
+}
+body {
+    font-family:var(--fonte-padrão);
+    background-color: var(--cor0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a.externo::after{
+    content: '\0020\1F517';
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    text-align: center;
+}
+
+header > p{
+    font-family: var(--fonte-padrão);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 7px;
+    margin-left: -8px;
+    margin-top: -2px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.322);
+    height: 21px;
+    width: 1300;
+}
+
+nav > a{
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none; 
+   /*TRANSIÇÃO DE UM LINK PARA O OUTRO*/ 
+    transition-duration: .5s;
+     
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main > article > h1{
+    padding-top: 20px;
+    color:var(--cor5);
+    font-family: var(--fonte-android);
+    font-size: 2em;
+}
+
+main > article > h2{
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    text-align: left;
+    font-weight: normal;
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    margin-left: 15px;
+    padding-left: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+
+}
+
+p{
+    font-family: var(--fonte-padrão);
+    font-size: 16px;
+    margin: 15px 0px;
+    text-align:justify;
+    /*RECUO DE PARÁGRAFOS*/
+    text-indent: 30px;
+    font-size: 1em;
+    /*ALTURA DA LINHA*/
+    line-height: 2em;
+}
+
+main strong{
+/*É POSSÍVEL EDITAR OS PARÁGRAFOS EM DESTAQUE*/
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main{
+    background-color: white;
+    min-width: 400px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    margin-top: 1px;
+    text-align: center;
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+article > h1{
+      font-family: var(--fonte-android);
+      color:var(--cor3);
+      font-size: 2em;
+}
+
+aside > h3{
+       background-color: var(--cor3);
+       color: white;
+       text-align: left;
+       margin: 20px;
+       border-radius: 10px 10px 0px 0px;
+       margin-bottom: -20px;
+       padding: 7px;
+       font-size: 18px;
+  
+}
+
+aside > div {
+     background-color: var(--cor1);
+     margin: 20px;
+     margin-top: 20px;
+     border-radius: 0px 0px 10px 10px;
+     padding: 3px;
+     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+}
+
+aside > p.final{
+    padding-bottom: 20px;
+}
+
+div.video{
+    position: relative;
+    background-color: var(--cor4);
+    height: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 15px;
+    /*esse padding se trata das bordas dentro do video, que é de flexível ajustação*/
+    padding-bottom: 59%;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+ }
+
+ul{
+    /*O código \0020 ou \00A0 são espaços logo após o emoji e contrabarra anterior também. PORÉM NÃO É COMPATIVEL COM QUALQUER NAVEGADOR SOMENTE O GOOGLE CHROME*/
+list-style-type: '\2714\0020\0020';
+columns: 2;
+list-style-position: inside;
+text-align: justify;
+
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    font-size: 0.8em;
+    margin-bottom: -20px;
+}
+
+footer p{
+    font-style: italic;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
