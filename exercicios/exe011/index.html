@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem dinâmica</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/foto-p.png" type="image/png">
+        <!--O comando source foi utilizado para ajustar a imagem m para p conforme aja uma diminuição de tela, CUIDADO: ajuste sempre o 'max-width' e coloque sempre 50 pixels a mais no parâmetro-->
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!--O comando source foi utilizado para ajustar a imagem g para m conforme aja uma diminuição de tela,-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+        <!--A imagem maior foi colocada primeiro para ser reajustada com o comando source-->
+    </picture>
+<!--PICTURE: comando para utilização de imagem flexivel-->
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML</p>
+
+    <audio src="midias/pilantra.mp3" controls autoplay></audio>
+<!--O Comando 'controls' é para emissão de controle do usuario na música | O Comando 'autoplay' é para a musica tocar automaticamente, porém depende do navegador. Se não funcionar é normal.-->
+<!-- MP3 WAV OGG outros formatos de arquivo, se você quiser compatibilidade com todos os navegadores é necessário outras formas de adicionar o áudio-->
+
+
+<!--OUTRA MANEIRA DE USAR AUDIO-->
+
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midias/pilantra.mp3" type="audio/mpeg">
+        <source src="midias/pilantra.mp3" type="audio/ogg">
+        <source src="midias/pilantra.mp3" type="audio/wav">
+    <!--EVITAR AO MAXIMO AUDIOS COM EXTENSÃO WAV (PESADOS)-->
+    <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midias/pilantra.mp3">Clique aqui para baixa o arquivo MP3.</a></p>
+    </audio>
+</body>
+</html>

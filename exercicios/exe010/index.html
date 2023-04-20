@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://www.instagram.com/sandracombr/" target="_blank" rel="external">instagram.</a></p>
+ <!--O Comando 'a' é o chamamento ao link externo--> 
+ <!--O comando 'target' é para ao clicar no link não aja uma mudança de site e um uma abertura de uma nova aba-->  
+<!--O comando 'rel' é a referencia de uma nova abertura de aba a um link externo-->
+<!--RESUMO: quando você for abrir uma aba de um site que não seja seu, o mais aconselhavel é justamente utilizar a criação de nova aba-->
+
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next">segunda página.</a></p>
+<!--Para que funcione desta maneira a pagina02 tem que estar na mesma pasta que o index-->
+<!--O Comando vai fazer a relação com outra pagina que esta dentro do nosso servidor -->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a></p>
+<!--_Self: abertura na própria pagina-->
+
+    <h1>Links para download</h1>
+    <ol> 
+        <ul>
+            <li><a href="livro/meulivro.pdf.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+            <li><a href="livro/meulivro.rar" download="meulivro.rar" type="application.zip">Livro compactado em ZIP</a></li>
+        </ul>
+    </ol>
+<!--LINK PARA BAIXAR OS DOCUMENTOS-->
+</body>
+</html>

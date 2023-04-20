@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /* Medidas Absolutas
+            cm, mm, in, px, pt, pc
+
+            Medidas Relativas
+            em, ex, rem, vw, vh, %
+            relativas ao tamanho padrão 
+            16px geralmente = 1em */
+            font-size: 1em;
+            font-weight: lighter;
+            /* lighter normal bold bolder  ou definir o peso numerico entre 900 - 100 porém não são todas as fontes que aceitam essa forma númerica.*/
+
+            /*CUIDADO: Weight -> Width -> Height */
+            font-style:unset
+            /*Estilo da fonte: italic, normal, oblique, inherit, initial, unset porém não são todas as fontes que aceitam */
+            text-decoration: underline;
+            /*sublinhado */
+        }
+
+        h1{
+            /*Shorthand font 
+            - font-style -> font-weight -> font-size -> font-family
+
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, fugiat consequatur, sed nemo repudiandae eligendi tenetur corporis voluptate impedit deserunt dolorem doloremque fuga ut ducimus veniam ipsum cum minima in! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta voluptatem officia est ratione itaque quisquam temporibus velit nemo dolorem rerum aperiam distinctio eaque excepturi praesentium facilis minus ducimus, inventore error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quod sint alias unde, suscipit ipsam, incidunt ut accusantium totam magnam vel odit nemo repellat esse, pariatur in reiciendis. Delectus, deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure libero dicta iusto ad beatae explicabo minus, error corrupti ratione doloribus non, at impedit necessitatibus ullam provident cumque in culpa similique!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laboriosam inventore voluptas esse quam consequuntur, et iure officiis tempora totam eveniet doloribus excepturi fugit exercitationem facilis optio quaerat ducimus aspernatur!</p>
+
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque beatae a reprehenderit excepturi consectetur esse vel incidunt iste necessitatibus recusandae quasi minima fugiat perferendis aliquam at nostrum iusto, quidem voluptatum.</p>
+    
+</body>
+</html>

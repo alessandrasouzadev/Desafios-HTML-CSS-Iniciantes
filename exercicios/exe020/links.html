@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+            /*  SELETORES PERSONALIZADOS
+                # =id 
+                . = class
+                : = pseudo-class
+                :: = pseudo-element
+                > = children 
+            */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            text-decoration: none; /*retira sublinhado do link*/
+            font-weight: bold; /*fonte negrito*/
+        }
+
+        a:visited{
+            color: darkred;
+        } /*pseudo-classe: modificar a cor dos sites já clicados e visitados*/
+
+        a:hover{
+            color: black;
+            text-decoration: underline; /*pseudo-classes: quando passar o mouse por cima a cor será alterada para preto e quando passar o mouse por cima colocar sublinhado*/
+        }
+
+        a:active{
+            color: yellow;
+        } /*Quando pressionado o mouse antes de clicar a cor do link ficará amarelo*/
+
+        .especial{
+            background-color: rgb(255, 140, 140);
+        }
+
+        .especial::before {
+            content: '►' ;
+        }
+
+        .especial::after{
+            content: '◄';
+        } /*pseudo-elementos: são criados com 2 '::' diferentemente das pseudo-classes, no caso desse exemplo fiz referencia deles juntamente as classes mas podem ser referenciadas de forma autonoma. | ex: ::after {} */
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/alessandrasouzadev" target="_blank" class="especial">Repositório GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/alessandrasouzadev" target="_blank">Linkedin</a></li>
+        <li><a href="https://www.Instagram.com/sandracombr/" target="_blank">Instagram</a></li>
+    </ul>
+    
+</body>
+</html>
