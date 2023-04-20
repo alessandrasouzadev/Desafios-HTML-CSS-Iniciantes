@@ -19,11 +19,22 @@
 2. contain: mostra a imagem 100% exibida | dependendo do tamanho da tela haverá cortes laterais
 3. cover: cobrir a tela inteira mesmo que para isso terá que 'cortar' a imagem*/
             background-size: cover;
+/*Na busca de um resultado com um fundo travado, isso se chama vínculo ou attachment que acompanha 2 funções: 
+1. scroll;	-> padrão; o fundo rola junto com o conteúdo
+2. fixed;	-> fundo fixo à tela, a medida que o conteúdo rola 
+(ótimo combinado com background-size: cover;) */ 
+            background-attachment:fixed; 
+
+
         }
 
+/*Shorthand - background
+    Sequência: color > image > position > / > size > repeat > attachment
+    Exemplo-- background: black url('imagens/wallpaper002.jpg') center center / cover no-repeat fixed;
+        }*/ 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -33,12 +44,22 @@
 </head>
 <body>
     <main>
-        <h1>Teste de Imagem de Fundo.</h1>
+        <h1>fundo fixo de tela.</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque perspiciatis sed temporibus quaerat placeat explicabo, nemo ipsam quasi facilis, odio consequuntur. Tempore nisi, laborum animi porro deleniti voluptate suscipit!
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, sed facilis. Quidem reiciendis impedit, perferendis mollitia vel quisquam reprehenderit sit doloremque odit sed, laborum sequi. Iusto nam asperiores reiciendis libero!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repudiandae omnis sit laborum laboriosam nesciunt tempora vitae aperiam! Quam ad cumque optio! Voluptatum officiis nemo, reprehenderit iusto unde quidem ipsam.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis velit impedit enim? Delectus cum aliquam numquam magnam harum unde, distinctio ex laboriosam incidunt dignissimos doloribus, exercitationem, repellat totam culpa?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem architecto id unde libero autem enim, reprehenderit provident dicta dignissimos aliquam beatae incidunt ducimus doloribus maxime quas illum fuga tempora dolore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ratione quas tempora, repudiandae, mollitia molestias laudantium, deleniti eaque sapiente delectus sequi inventore. Earum nemo fugiat consequatur totam at ducimus omnis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iste aliquam error a quaerat perferendis dicta, consequuntur porro atque ratione, architecto non nostrum velit suscipit, ut quas quasi quia quibusdam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum eius et, dignissimos delectus eligendi. Laudantium assumenda delectus iste. Necessitatibus ipsum reprehenderit tempora, molestias praesentium placeat dignissimos cupiditate illum molestiae!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt recusandae maxime accusantium provident nostrum cumque explicabo, doloremque quam excepturi molestiae et quas rem quaerat voluptate harum laboriosam unde voluptatum voluptatem?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magni. Autem iste cum nobis repudiandae harum libero veniam temporibus officia ex architecto! Quibusdam saepe dolores cupiditate suscipit magni aliquam eligendi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis inventore tempora accusantium saepe odio eveniet quia voluptatibus incidunt quaerat fugiat, rem nostrum magni explicabo vel, nulla illo! Nulla, repellat. Iusto?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fuga voluptates quidem nostrum ab neque quisquam aspernatur laborum temporibus quae dicta odit maxime perspiciatis, assumenda nobis amet. Debitis, deserunt aliquid!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, tempora adipisci consequuntur esse quibusdam nulla corrupti, possimus sapiente aspernatur laborum, provident ipsum. Porro eligendi facere non, dolorum exercitationem nostrum cupiditate?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe ad dolores facilis praesentium quaerat earum fugit ullam aperiam tempora nisi optio, voluptates nam sint aspernatur doloremque aliquid nesciunt eum dolore?
             </p>
     </main>
     
