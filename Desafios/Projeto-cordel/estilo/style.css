@@ -59,9 +59,13 @@ section{
     padding-top: 10vh;
     padding-bottom: 10vh;
     font-family: var(--fonte3);
-    font-size: 4.5vw;
-    line-height: 3.5em;
+    font-size: 3.5vw;
+    line-height: 2em;
     padding-left: 30px;
+}
+
+section p {
+    padding-bottom: 2em;
 }
 
 section.normal{
@@ -72,46 +76,31 @@ section.normal{
 section.imagem{
     background-color: black;
     color: white;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.473);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    min-height: 50vh;
 }
 
-section.imagem > article > p {
+section.imagem  > p {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.301);
-    padding-left: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+    padding: 20px;
 }
-
 
 section#conteiner{
     background-color: white;
     background-image: url('../imagens/background001.jpg');
-    background-attachment:fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    min-height: 50vh;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.410);
-}
-
-/*section article.position{
-    position: absolute;
-    right: 40%;
-    left: 10%;
-    transform: translate(-100px, 30px);
-}*/
 
 
-section  p  br.separador{
-    margin-bottom: 50px;
 }
 
 section#conteiner2{
+    background-color: white;
     background-image: url('../imagens/background002.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    min-height: 50vh;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.410);
 }
 
 
@@ -120,6 +109,6 @@ footer{
     color: white;
     text-align: center;
     font-family: var(--fonte1);
-    font-size: 2vw;
+    font-size: 1.7vw;
     padding: 10px;
 }
