@@ -21,87 +21,100 @@
     padding: 0;
 }
 
+html, body{
+    min-height: 100vh;
+/*todo o escopo se torna responsivo a altura
+exceto os 'contêineres especiais'*/
+}
+
 header{
     background-color: black;
-    min-height: 150px;
-    min-width: 1350px;
     text-align: center;
     color: white;
-    padding-top: 60px;
 }
 
 header > h1{
-    font-family:var(--fonte-principal);
-    font-size: 40pt;
+    padding-top: 50px;
+    font-variant: small-caps;
 }
 
 header > p {
-    font-family:var(--fonte-destaque);
-    font-size: 17px;
+    padding-bottom: 50px;
 }
 
-header a:hover {
+header a:hover, footer a:hover {
     color: white;
     text-decoration: dashed;
 }
 
-header > p > a {
+header a, footer a {
     color: white;
     text-decoration: dashed;
-}
-
-body{
-    background-color: white;
+    font-weight: bolder;
 }
 
 section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     font-family: var(--fonte-destaque);
     font-size: 20px;
+    line-height: 2em;
+    padding-left: 30px;
 }
 
-section.padrao{
-    margin-top: 50px;
-    margin-bottom: 50px;
+section.normal{
+    background-color: white;
+    color: black;
 }
 
-section p.pinicial{
-    text-align: left;
-    line-height: 2.5;
-    padding-left: 20px;
+section.imagem{
+    background-color: black;
+    color: white;
 }
 
-section#parallax1{
+section.imagem > p {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.301);
+    padding-left: 10px;
+}
+
+
+section#conteiner{
     background-color: white;
     background-image: url('../imagens/background001.jpg');
     background-attachment:fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-    height: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    min-height: 50vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
 }
 
-section p#destacada{
+/*section article.conteudo{
     background-color: rgba(0, 0, 0, 0.342);
     color: white;
     display: inline-block;
     width: 300px;
     height: 350px;
-}
+    position: absolute;
+    right: 30%;
+    left: 10%;
+    transform: translate(-127px, 75px);
+}*/
+
 
 section  p  br.separador{
     margin-bottom: 50px;
 }
 
-section#parallax2{
-    background-color: white;
+section#conteiner2{
     background-image: url('../imagens/background002.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    height: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    min-height: 50vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
 }
 
 
@@ -111,11 +124,5 @@ footer{
     text-align: center;
     font-family: var(--fonte-padrão);
     font-size: 15px;
-    padding: 5px;
-}
-
-footer > p > a {
-    color: white;
-    text-decoration: dashed;
-    font-weight: bold;
+    padding: 10px;
 }
