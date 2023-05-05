@@ -13,17 +13,40 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th { border: 1px solid black;
             padding: 10px;
         }
+        /*CABEÇALHO FIXO EM TABELAS GRANDES
+        1. passo: configure a 'table' a um positionamento relativo
+        2. passo: defina o caminho abaixo com o posicionamento 'sticky' (significa grudado)3. passo: top: 0 significa colar na parte superior.*/
+        thead{
+            position: sticky;
+            top:-1px;
+        }
 
         thead, th {
             /*por caracteristica padrão o th já é 'centralizado - negrito'*/
-            background-color: gray;
+            background-color:  #383838;
             color: white;
                 }
+        /* EFEITO ZEBRADO!
+        :nth-child(): seleciona elementos com base em suas posições em um grupo de elementos irmãos.
+        PARÂMETROS UTILIZADOS:
+        → (2n): seleciona 1 a cada 2 elementos (possível colocar quantos números desejar)
+        → odd: elementos de posição númerica (ímpar)→ even: elementos de posição númerica (par)*/
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
 
         td.num{
             text-align: right;
@@ -31,7 +54,7 @@
 
         tfoot{
             color: white;
-            background-color: gray;
+            background-color: #383838
         }
     </style>
 </head>
@@ -39,8 +62,9 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE 
+        CAPTION
             THEAD: cabeça
-                → TR, TD, TH
+                → TR, TD (dado), TH (título)
             TBODY: corpo
                 → TR, TD, TH
             TFOOT: rodapé
@@ -49,10 +73,12 @@
 
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <!--escopo descreve que o th é 'título da colunha (semântica)'-->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -170,7 +196,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <!--escopo descreve que o th é 'título da linha' (semântica)-->
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>190.755.799</strong></td>
             </tr>
         </tfoot>

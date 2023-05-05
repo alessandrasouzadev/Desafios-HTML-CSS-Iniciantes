@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de células</h1>
+    <!--Em uma planilha com formato distinto como no exemplo abaixo a 1 linha obtém somente 2 dados deixando assim um espaço diferentemente das outras linhas quem contém 3 dados. A mesclagem de células é fazer com que a linha com menos dados ocupe o espaço deixado.
+    
+    É necessário realizar a 'expansão' diretamente no dado que ocupará o espaço, existem 2 tipos de expansões.
+    → coluna: dado para extender a colunas - colspan="?"
+    → linha: dado para extender a linhas - rowspan="?"
+
+    No 1 exemplo proposto o dado 'B' terá se extender a para ocupar 2 colunas.
+
+    No 2 exemplo proposto foi retirado os primeiros dados da linha 3 e 4 fazendo assim com que os dados se misturassem de forma desordenada e não deixando um espaço como era de se imaginar. Para organizar novamente é necessário fazer com que o dado 'F' se extenda a ocupar 3 linhas-->
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>E</td>
+            <td rowspan="3">F</td>
+        </tr>
+        <tr>
+
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+
+            <td>K</td>
+            <td>L</td>
+        </tr>
+    </table>
+</body>
+</html>
