@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        iframe{
+            width: 400px;
+            height: 400px;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+<!--
+    IFRAME AINDA PODE SER USADO?
+    No lugar do link utilizaremos um iframe
+    O Iframe é considerado um 'quadro na mesma linha' ou um 'display-inline' tem aparência de uma 'aba nova dentro do site'
+    PARÂMETROS:
+        frameborder - retirada ou colocação da borda
+            - 0: sem borda
+            - 1: com borda de 1px
+        src="" = inserção de link
+
+    SITES PROTEGIDOS CONTRA IFRAMES
+    Alguns sites tem proteção para não serem exibidos por Iframes em sites desconhecidos
+
+    ALGUNS NAVEGADORES APRESENTAM INCOMPATIBILIDADE
+    o que você escrever dentre os parentêses do iframe é o que será mostrado ao usuário com navegador incompativel. DICA: deixe o link pois caso não funcione ele aparecendo como iframe, o usuário ainda sim poderá visita-ló.
+
+    ALTURA E LARGURA PADRÃO DE UM IFRAME
+    tamanho padrão 300x100px;
+    caso deseje mudar é possível modificar dentro da tag do próprio iframe com os parâmetros 'height e width'
+
+    DECLARAÇÃO DE TAMANHO PELAS CSS
+    a declaração de tamanhos do iframes pelas CSS são soberanas, estão acima das declaração individuais em cada Iframe em HTML
+
+    CONFIGURANDO A ROLAGEM NO IFRAME
+    com o comando 'scolling' define as rolagens de cada iframe com os seguintes parâmetros:
+        - auto: padrão, se o conteúdo exceder o tamanho do frame terá a rolagem
+        - yes: mesmo se o conteúdo cabesse por completo, ainda sim teria a barra de rolagem
+        - no: na regra, é a não utilização de rolagem (mas dependendo do navegador ele é ignorado e ainda sim terá rolagem)
+-->
+    <h1>Testando o uso de um Iframe</h1>
+    <p>Acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">CursoemVídeo</a> para aprender a programar.</p>
+
+
+    <p>
+        Acessando o site do
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="400" width="400"></iframe>
+        para aprender a programar.
+    </p>
+
+    <p>O site do <iframe src="https://www.google.com.br" frameborder="0">
+    <a href="https://www.cursoemvideo.com" target="_blank">Curso em Video</a>
+    </iframe> é muito legal</p>
+
+    <p>O repositório do Guanabara 
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500" width="500" scolling="no">
+        <a href="https://gustavoguanabara.github.io" target="_blank">Github</a>
+        </iframe>
+        também é legal!</p>
+
+</body>
+</html>

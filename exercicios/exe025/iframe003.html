@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframe</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela{
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+
+        }
+    </style>
+</head>
+<body>
+<!--CRIANDO A NAVEGAÇÃO NO IFRAME
+Nesse exemplo foi criado 3 links com saídas distintas, o objetivo desse exercicio é colocar as saídas dos links dentros do iframe na página, para isso é necessário:
+            - colocar um 'name' no iframe
+            - e no link criar um 'target' com o nome do iframe
+        
+CONTEÚDO NO IFRAME POR CÓDIGO
+Nesse exemplo, você cria um documento estático e padrão para aparecer no seu Iframe como uma 'imagem inicial' você tem a opção de utilizar o (src: caminho para links) ou o (srcdoc: criação de um novo html local) -->
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam minima adipisci corporis odit nesciunt fugit repellendus iure! Veniam, autem corrupti eveniet cumque quae fugiat, omnis obcaecati asperiores, sunt nobis animi.</p>
+
+    <ul>
+        <li><a href="páginas-extras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="páginas-extras/pagina002.html" target="frame">Segunda página</a></li>
+        <li><a href="páginas-extras/pagina003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sapiente saepe iure hic ex asperiores corrupti. Dolorem, qui architecto, nihil ad quae, cum veniam quod numquam error optio asperiores earum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, quasi eligendi? Voluptates consectetur neque mollitia facilis doloribus eligendi adipisci, fuga, nobis sapiente ab saepe ducimus expedita veritatis. Pariatur, hic impedit.</p>
+
+    <iframe src="" id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa modi aspernatur non, assumenda temporibus eveniet nisi nemo debitis autem distinctio, repudiandae officia perferendis expedita quam ipsa, ipsum minus iure inventore! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime facilis eius commodi quam cupiditate necessitatibus velit, deserunt autem vitae nesciunt voluptas earum possimus dolor? Rerum earum nesciunt laborum temporibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quae, unde voluptatum alias maxime eligendi quam eum delectus, officia beatae neque velit quaerat, quasi non expedita. Ducimus quasi odio possimus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam cum neque quibusdam, enim, aut dolorum assumenda tempora quae optio velit, doloribus eos inventore a perspiciatis deserunt porro unde vero! Eaque.</p><img src='cev.png'>">
+        <p>Infelizmente sue navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati exercitationem quis reiciendis praesentium deleniti! Deserunt suscipit, ex, optio velit tempore incidunt eum itaque sequi ullam ut quaerat sint soluta quod? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ducimus at et. Nobis incidunt natus ut. Sed, quo numquam. Modi consequuntur perferendis ratione magni odit sapiente, id explicabo nam eius?</p>
+</body>
+</html>
