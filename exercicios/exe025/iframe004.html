@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reiciendis nesciunt maxime officiis quasi nam molestiae quam et veniam culpa, alias adipisci consequatur tempore. Dolorem cumque sint itaque veniam tempora. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto voluptatem, repellat, consequatur commodi dolore tempora placeat minima quod molestias laboriosam non sed accusantium. Temporibus nisi labore vero debitis? Unde, ducimus?</p>
+<!--BLOQUEIO DE AÇÕES POTENCIALMENTE MALICIOSAS
+   → Parâmetros:
+            → sandbox: criação de proteção maior a ataques
+                ‼ sandbox: é um bloqueio de captura de informações
+                ‼ allow-same-origin: permitir conteúdo de mesma origem
+                ‼ allow-forms: permitir formulários
+                ‼ allow-scripts: permitindo scripts
+                (dentre outros parâmetros para estudar na documentação)
+            → referrerpolicy: politíca de referência 
+                ‼ no-referrer-when-downgrade: politíca padrão de referência.
+                ‼ no-referrer: o conteúdo carregado dentro do iframe não vai coletar nenhum tipo de informação do usuário.
+                (dentre outros parâmetros para estudar na documentação)
+-->
+<iframe src="páginas-extras/pagina004.html" sandbox="allow-same-origin allow-forms" referrerpolicy="no-referrer">Seu navegador não é compatível com isso</iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquam facilis. Vero facilis aut laboriosam eum quasi nemo, iusto voluptatem distinctio provident quis reiciendis in fuga corrupti. Incidunt, cumque doloremque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi deleniti nam soluta doloremque totam amet maiores officia dolor ex deserunt consectetur magni incidunt sit ad sed nobis corporis, quibusdam eaque.</p>
+    
+</body>
+</html>
