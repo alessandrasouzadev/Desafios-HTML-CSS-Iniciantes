@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--CRIAÇÃO DE FORMULÁRIOS.
+        → CUIDADO: não existe vínculo entre o 'nome' descrito no paragráfo e o conteúdo inserido no input, PORÉM se for realizado a criação de uma LABEL ao nome você pode criar uma ligação a (label - id) utilizando o mesmo dado(nome)
+
+        →  AUTOCOMPLETE: é quando ao inserir os dados o navegador já sugere dados que já foram inseridos. Caso o desenvolvedor deseje habilitar é só manter com o parâmetro: 'on' caso contrário 'off'. INTERESSANTE SABER, que quando habilitado o autocomplete em cada paragráfo de input você pode sugerir certos dados como no caso do input usuário, é possível sugerir 'username'ou 'nickname' entre outros dados que podem ser sugeridos inclusive em outros parâmetros seja, senha, aniversário entre outros.
+
+        → PARA ONDE ENVIAR OS DADOS? utilizando o comando 'action' você dispara uma ação quando finalizar o formulário ao apertar o 'submit' e PRESTE ATENÇÃO! ao apertar o botão a URL modifica com esses dados:
+        http://127.0.0.1:5500/exercicios/exe026/cadastro.php?nome=Alessandra&sobrenome=Souza
+        Interessante analisar, que até o parte 'cadastro.php' você tem o conteúdo em HTML, o ponto de exclamação '?' é o que divide o conteúdo HTML e os parâmetros extras enviados. 
+
+        → METÓDOS SIMPLES DE ENVIO DE FORMULÁRIOS:
+
+            → GET: padrão, dados ficam visíveis na URL. Quando melhor utilizar?
+                - DADOS NÃO SENSÍVEIS - nome, sobrenome, etc...'
+                - Fácil compartilhamento de Url
+                - Só pode até 3.000 Bytes (3.000 letras)
+            (method="GET")
+
+            → POST: Os dados continuam visíveis SÓ QUE NÃO na URL
+                - ficam em: inspecionar > Network > Payload.
+                ou seja, não apresenta nenhuma segurança para isso é necessário estudar HTTPS.
+                - DADOS SENSÍVEIS: senha, cpf, etc...
+                - ENVIO DE FOTOS
+            (method="POST")
+        
+        → COMO CRIAR CAMPOS OBRIGATÓRIOS?
+        Com o parâmetro 'required' dentro do input você define tal requisito.
+
+        → COMO DEFINIR O MINIMO E MÁXIMO DE LETRAS E NÚMEROS?
+        Com o parâmetro 'minlenght' é definido o mínimo e com 'maxlenght' é definido o máximo.
+
+        → TAMANHO DA CAIXA?
+        Tem como definir o tamanho da caixa para amostrar somente a quantidade de caracteres definidas no size, mas se o MAXLENGHT for maior automaticamente criará uma barra de rolagem.
+
+        → COMO DEIXAR ALGO ESCRITO TRANSPARENTE NO INPUT?
+        Com o comando 'placeholder' é possível deixar um comentário dentro da caixa de input
+    -->
+    <h1>Meu primeiro Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label>  
+            <input type="text" name="nome" id="inome"></p>
+
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    
+</body>
+</html>
