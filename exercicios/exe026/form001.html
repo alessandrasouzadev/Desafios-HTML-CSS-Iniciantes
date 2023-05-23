@@ -47,6 +47,62 @@
 
         → COMO DEIXAR ALGO ESCRITO TRANSPARENTE NO INPUT?
         Com o comando 'placeholder' é possível deixar um comentário dentro da caixa de input
+
+        → MIN: mínimo de uma caixa númerica
+        → MINLENGHT: mínimo de caracteres
+        → STEP: passo - utilizado para números decimais
+        → VALUE: dado que já aparece dentro da caixa. CUIDADO: com o value automaticamente o placeholder é retirado.
+
+        → Input:email; a única validação buscada por esse parâmetro é o @ o conteúdo pode está errado, mantendo o @ ele automaticamente reconhece. Não é a melhor opção para validação.
+        → Input:tel; a única vaidação é o reconhecimento númerico a pessoa pode digitar somente 1 número e ele reconhecerá como válido, caso deseja definir um padrão é necessário aprender - EXPRESSÕES REGULARES - RegEx
+
+        → COMO DEFINIR UMA EXPRESSÃO REGULAR? 
+            - pattern = parâmetro para colocar expressões regulares (padrão).
+            - ^: iniciando uma expressão regular
+            - $: finalizando uma expressão regular
+            - pattern="^[0-9]{4}-[0-9]{4}$": o números poderão ser digitado entre 0-9 com 4 caracteres separado por virgula e repete a mesma expressão somando um total de 8 caracteres
+            - pattern="^\d{4,5}-\d{4}$": os números serão definido por digitos \d, que podem ser inseridos 4 ou 5 caracteres aceitando assim o número de telefone também.
+            - pattern="^\(\d{2}\)\d{4,5}-\d{4}$": os números agora aceitam inserção de ddd, definido pelo parenteses com aceitação de apenas 2 digitos.
+
+        → AGRUPAMENTO DOS CAMPOS DO FORMULÁRIO? É possível com o comando FIELDSET podendo também inserir uma legenda ao agrupamento com o comando LEGEND
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+            </fieldset>
+        
+        → Input:checkbox: é a caixa que você pode selecionar mais de uma opção.
+        → Input:radio: é a caixa que você pode selecionar APENAS UMA OPÇÃO, muito utilizada nas seleções de 'Sexo' para que isso aconteça o NAME de ambos os dados devem obter O MESMO NOME.
+            - checked: para que os dados já apareçam marcados.
+
+        → input:color: é um input de cores retornando um padrão RGB ou hexadecimal, tem bastante utilidade quando você está desenvolvendo o seu código e precisa buscar alguma cor especifica naquele momento. Para definir uma cor inicial é só definir com o parâmetro - value.
+            - <input type="color" name="cor" id="icor" value="#00ff00">
+
+        → input:range: muito utilizado para 'níveis de satisfação' ele POR PADRÃO tem um intervalo de 0 a 100 que será retornado ao desenvolvedor, mas você pode definir da maneira que deseja, utilizando os parâmetros: MIN E MAX
+            - <input type="range" name="nivel" id="inivel" min="1" max="5">
+
+        → input:file: utilizado para envio de imagem para web, com arquivos do seu computador. CUIDADO: as imagens dificilmente tem menos que 3.000 BYTES por isso a melhor forma é utilizar o metódo POST
+            - <input type="file" name="foto" id="ifoto">
+
+        → select: É controle que apresenta um MENU DE OPÇÕES. As opções dentro do menu são representadas pelo elemento <OPTION>, que podem ser agrupados por elementos <OPTGROUP> - NÃO DA PRA SELECIONAR O LABEL é só descritivo. As opções podem ser pré-selecionadas para o usuário.
+            - selected: definir o dado já selecionado.
+
+        → datalist: O bloco retorna dados que você pode selecionar mas caso não tenha a sua opção, você tem a liberdade de escrever. NÃO ESQUEÇA! é necessário fazer a referência do id data lista com a list no input.
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option value="CONT">Contabilista</option>
+
+        → textarea: ontrole de edição de texto simples de várias linhas, útil quando você deseja permitir que os usuários insiram uma quantidade considerável de texto de formato livre, por exemplo, um comentário em uma revisão ou formulário de feedback.
+            - cols: quantidade de colunas que a caixa irá suportar 
+            - rows: quantidade de linhas que a caixa terá até que ocorrá a quebra de linha
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            - IMPORTANTE DEIXAR COMO POST, pelo limite de BYTES suportado pelo GET.
+
+        → Output: Elemento de saída no qua um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário. CUIDADO: o comando não envia nenhum dado ao sistema, ele somente imprimi algo na tela
+            <output name="soma" id="isoma">0</output>
+                </p>
+
+            - parâmetro definido dentro dos 'inputs':
+            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"
     -->
     <h1>Meu primeiro Formulário</h1>
     <form action="cadastro.php" method="post" autocomplete="off">
