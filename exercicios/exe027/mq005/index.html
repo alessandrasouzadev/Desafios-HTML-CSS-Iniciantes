@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/phone.css">
+    <link rel="stylesheet" href="estilos/media-query.css" >
+    
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1> 
+        <span id="burguer" class="material-icons md-18" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, facilis. Maiores qui dolorem excepturi ab enim aperiam nihil facilis quaerat ipsum expedita, asperiores alias adipisci! In dolor amet alias eligendi?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo voluptas doloremque, laboriosam officia provident ipsam repellendus, odio nostrum eaque deleniti qui. Eligendi laudantium temporibus asperiores, ad est doloribus dicta earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita suscipit totam nisi aspernatur odit, delectus quasi itaque veritatis rerum provident sed amet optio temporibus unde dolores vitae laboriosam ipsam!</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident numquam, ex officiis ea illo nulla repudiandae assumenda temporibus aliquid ipsum, id eum at commodi voluptatibus a magni? Culpa, optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus eos cupiditate, fugit nemo maiores. Facilis, architecto ad molestiae id adipisci, odit, dolor aliquid incidunt est enim quaerat obcaecati dolorum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis at, nostrum nihil eligendi provident mollitia tempora quo, ipsa assumenda accusantium neque facere omnis quos expedita illo quasi sunt asperiores iusto.</p><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum quos nesciunt laborum quidem sapiente, inventore commodi temporibus sit necessitatibus nihil, rerum quod nulla nemo fugiat corporis? Repudiandae nam voluptatum ducimus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A corrupti sint doloremque pariatur vitae ducimus culpa error porro non velit provident, facilis, nostrum voluptas sed hic impedit saepe, deserunt obcaecati. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde vero impedit sequi quaerat voluptate doloremque! Ratione delectus consectetur beatae modi nihil amet non obcaecati, magnam aspernatur quidem sit praesentium corporis.</p><br>
+        </article>
+    </main>  
+    <script>
+/*FUNCIONALIDADE DO MENU HAMBURGUER EM JAVASCRIPT*/
+        function clickMenu(){
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else{
+                itens.style.display = 'block'
+            }
+         }
+    </script>  
+</body>
+</html>

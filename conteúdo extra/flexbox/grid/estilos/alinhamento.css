@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*Alinhamento*/
+.container{
+    background-color: #333;
+    border:3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50vh;
+/*alinha os itens do eixo horizontal*/
+    justify-content: center;
+/*alinha os itens do eixo vertical*/
+    align-items: center;
+}
+
+.container div {
+    background-color: #CCC;
+    padding: 20px;
+    border: 1px solid blue;
+}

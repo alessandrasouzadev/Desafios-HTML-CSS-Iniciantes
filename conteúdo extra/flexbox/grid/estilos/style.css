@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.container{
+    background-color: #333;
+    border:3px solid red;
+    padding: 15px;
+    display: grid;
+    /*largura entre as colunas: 
+    1. coluna terá 50px
+    2. espaço que resultar entre as duas
+    3. 10% do elemento pai*/
+    grid-template-columns: 50px auto 10%;
+    height: 35vh;
+    /*altura entre as linhas*/
+    grid-template-rows: 70% 30%;
+    /*espaçamento entre as linhas da coluna
+    5px entre cada item - melhor opção*/
+    gap: 5px;
+    /*espaçamento entre linhas*/
+    row-gap: 10px;
+    /*espaçamento entre colunas*/
+    column-gap: 15px;
+}
+
+.container div {
+    background-color: #CCC;
+    padding: 20px;
+    border: 1px solid blue;
+}
+

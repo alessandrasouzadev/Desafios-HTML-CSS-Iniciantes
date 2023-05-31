@@ -1,0 +1,68 @@
+body{
+    padding-bottom: 500px;
+}
+
+/*Flex pode ser considerado evolução do seria a utilização do POSITION
+Utilização de comando com o componente-pai*/
+.container{
+    background-color: #eee;
+    border: 2px solid lightskyblue;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    display: flex;
+    /* alinhamento horizontal - linhas */
+    justify-content: space-between;
+    /* alinhamento vertical - colunas */
+    align-items: center;
+
+/*Quando área máxima da linha for atinginda, os itens serão jogado para um nova linha abaixo respeitando assim o parâmetro utilizado acima com espaçamento entre linhas*/
+    flex-wrap: wrap;
+}
+
+
+.item{
+    background-color: lightcoral;
+    border: 2px solid lightseagreen;
+    height: 50px;
+    width: 50px;
+}
+
+/*flex-basis: define o ínicio do elemento(largura - width) - o tamanho por padrão no ínicio do layout*/
+.box{
+    background-color: lightcoral;
+    border: 2px solid lightseagreen;
+    height: 50px;
+    flex-basis: 30px;
+/*SHORTHAND PARA ITEM
+grow - shrink - basis*/
+flex: 1 1 50px;
+}
+
+/*flex-grow: define como o item vai crescer no layout (respeitando o basis) - no exemplo ele aumenta 2x mais do que os outros itens*/
+#item-1 {
+    flex-grow: 2;
+}
+
+#item-2,
+#item-3{
+    flex-grow: 1;
+}
+/*flex-shrink: controla a forma como o elemento diminui - no exemplo ele diminui 2x mais do que os outros itens */
+#item-3{
+    flex-shrink: 2;
+}
+
+/*order: modificar posições dos elementos.*/
+#item-2{
+    order: 1;
+}
+
+#item-3{
+    order: 2;
+}
+
+#item-1{
+    order: 3;
+}
+

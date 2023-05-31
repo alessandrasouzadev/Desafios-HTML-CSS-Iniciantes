@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/*Template areas*/
+
+.container{
+    background-color: #333;
+    border:3px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+/*primeiro você define o posicionamento das areas.
+1. header 100%
+2. sidebar 25%
+3. content 75%
+4. footer 100% */
+    grid-template-areas:
+    'header header header header'
+    'sidebar content content content'
+    'footer footer footer footer' ;
+}
+
+.container div {
+    background-color: #CCC;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+/*declara as definições pre-definidas no grid pai, dentro de seus grid filhos.*/
+#header{
+    grid-area: header;
+}
+
+#sidebar{
+    grid-area: sidebar;
+    height: 50vh;
+}
+
+#content{
+    grid-area: content;
+    height: 50vh;
+}
+
+#footer{
+    grid-area: footer;
+}
